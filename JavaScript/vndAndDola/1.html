@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển Tiền</title>
+    <style>
+        #submit{
+            border: solid 1px #0fbcf9;
+            background-color: #ffc048;
+            width: 100px;
+            height: 40px;
+        }
+        #submit:hover{
+            background-color: #ef5777;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function convert(){
+            var amount = parseFloat(document.getElementById('amount').value);
+            var c1 = document.getElementById('c1').value;
+            var c2 = document.getElementById('c2').value;
+            if(amount < 0){
+                document.getElementById('result').value = "Unbelievable";
+            }
+            else{
+                if(c1 == 'vietnam' && c2 == 'usd'){
+                    document.getElementById('result').value = amount/23000;
+                }
+                if(c1 == 'usd' && c2 == 'vietnam'){
+                    document.getElementById('result').value = amount*23000;
+                }
+                if(c1 == 'usd' && c2 == 'usd' || c1 == 'vietnam' && c2 == 'vietnam'){
+                    document.getElementById('result').value = amount*1;
+                }
+                // else{
+                //     document.getElementById('result').value = amount*1;
+                // }
+            }
+        }
+    </script>
+    <form>
+        <span>Amount</span><br><br>
+        <input type="number" id="amount" name ="amount"><br><br>
+        <span>From Currency</span><br><br>
+        <select id="c1"><br><br>
+        <option value="vietnam">Việt Nam Đồng</option>
+        <option value="usd">USD</option>
+        </select><br><br>
+        <span>To Currency</span><br><br>
+        <select id="c2">
+        <option value="usd">USD</option>
+        <option value="vietnam">Việt Nam Đồng</option>
+        </select><br><br>
+        <input type="button" value="Convert" id="submit" class="submit" name="submit" onclick="convert();"><br><br>
+        <input type="text" id="result">
+    </form>
+    <script></script>
+</body>
+</html>

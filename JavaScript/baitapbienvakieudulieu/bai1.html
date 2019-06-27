@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai1</title>
+</head>
+<body>
+    <!-- <table>
+        <span>Name : </span>
+        <input type="text" id="name" name="name" width="300px" height="20px"></br>
+        <span>Math : </span>
+        <input type="text" id="name" name="name" width="300px" height="20px"></br>
+        <span>Physical : </span>
+        <input type="text" id="name" name="name" width="300px" height="20px"></br>
+        <span>Chemistry : </span>
+        <input type="text" id="name" name="name" width="300px" height="20px"></br>
+        <span>Biological : </span>
+        <input type="text" id="name" name="name" width="300px" height="20px"></br>
+    </table> -->
+    <script type="text/javascript">
+    let name = prompt("Enter Your Name : ", "");
+    let Math = prompt("Enter Score Math : ", "");
+    let Physical = prompt("Enter Score Physical : ", "");
+    let Chemistry = prompt("Enter Score Chemistry : ", "");
+    let Biological = prompt("Enter Score Biological : ", "");
+    // let name = "Obama";
+    // let Math = 9;
+    // let Physical = 10;
+    // let Chemistry = 5.5;
+    // let Biological = 7;
+    let enter = "</br>";
+    let space = " + ";
+    let numberMath = Number(Math);
+    let numberPhysical = Number(Physical);
+    let numberChemistry = Number(Chemistry);
+    let numberBiological = Number(Biological);
+    
+    document.write("Name : " + name + enter);
+    document.write("Score Math : " + Math + enter);
+    document.write("Score Physical: " + Physical + enter);
+    document.write("Score Chemistry : " + Chemistry + enter);
+    document.write("Score Biological: " + Biological + enter);
+    document.write("Average Score = " + "(" + Math + space + Physical + space + Chemistry + space + Biological + ") / 4"
+     + " = " + ((numberMath + numberPhysical + numberChemistry + numberBiological)/4) + enter);
+    </script>
+</body>
+</html>

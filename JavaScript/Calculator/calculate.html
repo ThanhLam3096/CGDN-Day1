@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator JS</title>
+    <style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        color: #786fa6;
+    }
+    span{
+        margin-left: 30px;
+    }
+    input{
+        margin-left: 30px;
+        border: solid #ef5777;
+    }
+    #submit{
+        border: solid 1px #0fbcf9;
+        background-color: #ffc048;
+        width: 100px;
+        height: 40px;
+        margin-left: 30px;
+        font-size: 30px;
+    }
+    #submit:hover{
+        background-color: #ef5777;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        function calc(){
+            var n1 = parseInt(document.getElementById('one').value);
+            var n2 = parseInt(document.getElementById('two').value);
+            var opr = document.getElementById('operators').value;
+            if(opr == "+"){
+                document.getElementById('result').value = n1+n2;
+            }
+            if(opr == "-"){
+                document.getElementById('result').value = n1-n2;
+            }
+            if(opr == "*"){
+                document.getElementById('result').value = n1*n2;
+            }
+            if(opr == "/"){
+                if(n2==0){
+                    document.getElementById('result').value = "Unbelievable";
+                }
+                else{
+                document.getElementById('result').value = n1/n2;
+                }
+            }
+            if(opr == "%"){
+                if(n2 == 0){
+                    document.getElementById('result').value = "Unbelievable";
+                }
+                else{
+                document.getElementById('result').value = n1%n2;
+                }
+            }
+        }
+    </script>
+    <span>Number One</span>
+    <input type="text" class="one" id="one" name="one"><br><br>
+    <span>Number Two</span>
+    <input type="text" class="two" id="two" name="two"><br><br>
+    <span>Choose Calculation</span>
+    <select id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <br><br>
+    <button onclick="calc();" id="submit">=</button> <br><br>
+    <input type="text" id="result"/>
+</body>
+</html>

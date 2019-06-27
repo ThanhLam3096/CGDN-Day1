@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circle</title>
+</head>
+<body>
+    <script>
+        var inputR = prompt("Enter R =", );
+        var r = parseInt(inputR);
+        var pi = Math.PI;
+        var enter = "</br>";
+        var perimeter = r*2*pi;
+        var area = Math.pow(r,2)*pi;
+        document.write("Radius = " + r + enter + "PI = " + pi + enter);
+        document.write("Perimeter = " + perimeter.toFixed(2) + enter);
+        document.write("Area = " + area.toFixed(2) + enter);
+    </script>
+</body>
+</html>
